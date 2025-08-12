@@ -5,7 +5,7 @@ if($name == "") {
     echo "No data submitted";
     
 }else{
-echo $name;
+die("Thank you for your feedback, $name");
 
 
 }
