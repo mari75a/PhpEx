@@ -23,5 +23,13 @@
     echo $associativeArray['name'] . "<br>";
   
     echo count($associativeArray);
+    echo isset($associativeArray['name']) ? 'Name exists' : 'Name does not exist'. "<br>";
 
+    $sum =add(10,20);
+    echo  $sum . "<br>";
+
+    function add($a,$b){
+        return $a + $b;
+
+    }
 ?>
