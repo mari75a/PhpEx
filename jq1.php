@@ -11,6 +11,7 @@
 <script>
     $('#tutorial').click(function(){
            $(this).css('color','red');
+           $(this).fadeTo("slow", 0.5);
     });
 </script>
 </body>
