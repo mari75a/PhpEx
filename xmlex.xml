@@ -4,6 +4,7 @@
     <!ELEMENT new-car (model, price)>
     <!ELEMENT used-car (model, price, mileage, condition?)>
     <!ELEMENT model (#PCDATA)>
+    <!ATTLIST model name CDATA #REQUIRED>
     <!ELEMENT price (#PCDATA)>
     <!ELEMENT mileage (#PCDATA)>
     <!ELEMENT condition (#PCDATA)>
@@ -11,7 +12,7 @@
 
 <stock>
     <new-car>
-        <model>Toyota Corolla 2025</model>
+        <model name="Toyota Corolla 2025">Toyota Corolla 2025</model>
         <price>25000</price>
     </new-car>
 
