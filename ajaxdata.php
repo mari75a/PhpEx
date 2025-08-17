@@ -1,5 +1,6 @@
 <?php
 
-    echo("I  got your msg");
+    $name=$_GET['q'];
+    echo( $name ."  got your msg");
 
 ?>

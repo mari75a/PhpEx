@@ -6,12 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+
+ <input type="text" id="name">
  <button  onclick="getdata()">Get data</button>    
 
  <script>
 
     function getdata(){
 
+
+        var name=document.getElementById("name");
         var requset = new XMLHttpRequest();
 
         requset.onreadystatechange = function(){
@@ -22,7 +26,7 @@
             }
         }
 
-        requset.open('GET','ajaxdata.php');
+        requset.open('GET','ajaxdata.php?q='+name.value);
         requset.send();
 
     }
