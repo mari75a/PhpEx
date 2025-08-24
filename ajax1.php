@@ -8,6 +8,7 @@
 <body>
 
  <input type="text" id="name">
+ <input type="text" id="email">
  <button  onclick="getdata()">Get data</button>    
 
  <script>
@@ -16,6 +17,11 @@
 
 
         var name=document.getElementById("name");
+        var email=document.getElementById("email");
+        var form = new FormData();
+
+        form.append("name", name.value);
+        form.append("email", email.value);
         var requset = new XMLHttpRequest();
 
         requset.onreadystatechange = function(){
@@ -26,8 +32,8 @@
             }
         }
 
-        requset.open('GET','ajaxdata.php?q='+name.value);
-        requset.send();
+        requset.open('POST','ajaxdata.php');
+        requset.send(form);
 
     }
  </script>
